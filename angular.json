@@ -30,7 +30,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              
+
+            ]
           },
           "configurations": {
             "production": {
@@ -54,7 +57,7 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 },
-                {
+                { 
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
@@ -81,7 +84,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-devkit/build-angular:karma", 
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -94,7 +97,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "../node_modules/chart.js/dist/Chart.min.js"
+            ]
           }
         },
         "lint": {
