@@ -1,7 +1,13 @@
-<div class="row m-0">
-  <p class="col-6">ActiveCases:</p> <p class="col-6">Confirmed Cases:</p>
+<div style="padding:3rem; padding-bottom: 1rem;">
+  <form action="/action_page.php">
+    <label for="state">State:</label>
+    <select  (change)="onSelect($event.target.value)" [(ngModel)]="states">
+      <option *ngFor = 'let state of states' value={{state}} >{{state}}</option>
+    </select>
+  </form>
 </div>
-<div class="container" style="position: absolute; height:40vh; width:70vw">    
+<div class="container" style="position: absolute; height:40vh; width: 85vw;
+padding-left: 10rem; color: 'red'; ">    
     <canvas id="canvas">{{ Linechart }}</canvas>    
   </div>
 
